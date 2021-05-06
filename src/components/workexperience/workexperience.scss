@@ -32,6 +32,9 @@
 
             .vertical-timeline-element-content {
                 box-shadow: 0 0.25em 0.5em 0 rgba($color: #000000, $alpha: 0.25), 0 0.4em 1.25em 0 rgba($color: #000000, $alpha: 0.15) !important;
+                overflow: hidden !important;
+                
+                
                 
                 h3{
                     font-family: 'Anton', sans-serif;
@@ -40,20 +43,25 @@
                     font-size: 1.25rem;
                     line-height: 1;
                     text-transform: uppercase;
+                    overflow: hidden !important;
                 }
                 h5{
                     color: rgb(145, 145, 145);
                     font-size: 0.75rem;
+                    overflow: hidden !important;
                 }
     
                 .desc{
                     margin:10px 0 10px 0 !important;
                     line-height: 1 !important;
+                    overflow: hidden !important;
                     ul{
                         list-style-type: circle !important;
                         color: black;
-
+                        
+                        overflow: hidden !important;
                         li{
+                            overflow: hidden !important;
                             padding:0.1em !important;
                             color: rgb(83, 108, 141);
                             &::before{
