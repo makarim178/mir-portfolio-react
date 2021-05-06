@@ -6,9 +6,8 @@ import './vdoContainer.scss';
 const VideoContainer = ({video}) => {
 
     const opts = {
-        height: '195',
-        width: '320',
-
+        height: '100%',
+        width: '100%',
     }
 
     return (

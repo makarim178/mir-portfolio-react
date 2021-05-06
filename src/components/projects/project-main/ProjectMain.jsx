@@ -38,7 +38,6 @@ const ProjectMain = () => {
                 </div>
 
                 {
-
                     data !== null && data.map((d) => (
                     
                     <div className="projContainer" key={d.id} style={{left: `${((d.id -1)*100)}vw`, transform: `translateX(-${currentSlide * 100}vw)`}}>

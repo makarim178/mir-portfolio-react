@@ -11,7 +11,7 @@
 
     .projTitle {
         text-align: center;
-        margin-top: 90px;
+        padding-top: 90px;
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -28,7 +28,9 @@
     
     .projContainer{
         width: 100vw;
-        height: 80%;
+        height: calc(100vh - 300px);
+
+        
         // background-color: silver;
         position: absolute;
         
@@ -45,6 +47,10 @@
         overflow: hidden; 
         transition: all 0.5s ease-in-out;
 
+        @include mobile{
+            flex-direction: column;
+        }
+
         .projItem{
             width: 90%;
             height: 100%;
@@ -54,6 +60,10 @@
             margin: 10px 10px;
             display: flex;
 
+            @include tab{
+                flex-direction: column;
+            }
+
             .projLeft{
                 flex:4;
                 height: 100%;    
@@ -61,22 +71,48 @@
                 justify-content: center;
                 align-items: center;            
                 position: relative;
+
+                @include tab{ 
+                    flex: 3;
+                    padding: 20px;
+                }
+
+                @include mobile {
+                    flex: 3;
+                }
                 .lcFront{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     padding:0.2em;
+                    @include tab{
+                        
+
+                    }
 
                     .projLcTitle{
                         position: relative;
+
 
                         h2{
                             font-size: 2.5em;
                             text-transform: uppercase;
                             padding: 30px;
                             margin-bottom: 50px;
+
+
                             color: rgba($color: #000000, $alpha: 0.7);
+                            @include tab{
+                                font-size: 0.75em;
+                                padding: 0;
+                                margin-bottom: 0;
+
+                            }
+
+                            @include mobile{
+                                font-size: 0.6em;
+                            }
                         }
 
                         .lcTitleBack{
@@ -84,9 +120,17 @@
                             top: -20px;
                             left: 30%;
 
+                            @include tab{
+                                display: none;
+                            }
+
                             h1{
                                 color: rgba($color: #000000, $alpha: 0.1);
                                 font-size: 8rem;
+
+                                @include tab{
+                                    font-size: 2em;
+                                }
                             }
                         }
                     }
@@ -98,22 +142,55 @@
                         text-transform: capitalize;
                         font-style: italic;
 
+                        @include tab{
+                            font-size: 0.65rem;
+                        }
+
+                        @include mobile{
+                            font-size: 0.5rem;
+                        }
+
                        
                     }
 
                     p{
                         text-align: justify;
                         padding: 0 20px;
+
+                        @include tab{
+                            font-size: 9px;
+                            padding: 0 5px;
+                        }
+
+                        @include mobile{
+                            font-size: 8px;
+                        }
                     }
 
                     .visitBtn{
                         width: 100%;
                         margin-left: 40px;
                         padding-top: 30px;
+
+                        @include tab {
+                            padding-top: 5px;
+                        }
+                        @include mobile {
+                            padding-top: 5px;
+                            
+                        }
                         a{
                             .lcProjGlobeBtn{
                                 color: rgba($color: #000000, $alpha: 0.7);
                                 transition: all 0.5s ease;
+
+                                @include tab{
+                                    font-size: 12px;
+                                }
+                                
+                                @include mobile{
+                                    font-size: 10px;
+                                }
                                 
                                 &:hover{
                                     color: rgba($color: #000000, $alpha: 0.5);
@@ -138,6 +215,14 @@
                 position: relative;
                 overflow: hidden !important;
                 transition: all 1s ease-in-out;
+
+                @include tab{
+                    flex: 9;
+                }
+
+                @include mobile {
+                    flex: 10;
+                }
                 
                 
 
@@ -171,6 +256,13 @@
                     padding:5px;
                     justify-content: center;
                     transition: all 0.5s ease-in-out;
+
+                    @include tab{
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                    }
+                    @include mobile{}
                 }
                 
             }

@@ -13,7 +13,11 @@
         filter:brightness(60%);
         filter:contrast(120%);
     }
+
+
     .contents{
+
+
         .introText{
             color: white;
             height: calc(100vh - 90px);
@@ -24,10 +28,16 @@
             // align-items: center;
             justify-content: center;
             margin-left: 5rem;
+
+            
     
             .txtBg{
                 font-family: 'Anton', sans-serif;
                 text-transform: uppercase;
+
+                @include tab{
+                    padding-right: 100px;
+                }
                 
                 // display: flex;
                 // flex-direction: column;
@@ -53,6 +63,15 @@
                     font-family: inherit;
                     font-size: 4rem;
                     text-shadow: 2px 2px 5px rgba($color: $txtColorBlue, $alpha: 0.45);
+
+                    @include tab {
+                        font-size: 2rem;
+                    }
+
+                    @include mobile{
+                        font-size: 1.75rem;
+                    }
+                    
                     
 
                     span{
@@ -62,9 +81,20 @@
                     }
                 }
                 h3{
-                    line-height: 3.5rem;
+                    line-height: 1;
                     font-family: inherit;
                     font-size: 3rem;
+                    overflow: hidden;
+                    @include tab {
+                        line-height: 1;
+                        font-size: 1.85rem;
+                    }
+
+                    @include mobile{
+                        line-height: 1.25;
+                        font-size: 1.5rem;
+                    }
+
                     
                     
                     span{
@@ -81,11 +111,27 @@
                 }
 
                 .slogan{
-                    width: 45%;
+                    padding-right: 200px;
+
+                    @include mobile{
+                        padding-right: 50px;
+                    }
+                    
                     p{
                          font-family: 'Source Sans Pro', sans-serif;
+                         text-align: justify;
+                         text-justify: inter-word;
                          font-size: 1.25rem;
                          text-transform: none;
+
+                         @include tab{
+                             font-size: 1rem;
+                         }
+                         @include mobile{
+                             font-size: 0.9rem;
+                         }
+
+
                     }
                 }
                  

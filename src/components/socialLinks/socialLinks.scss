@@ -7,11 +7,19 @@
     cursor: pointer;
     transition: all 1s ease-in-out;
 
+    
     .icon{
         margin-right:10px;
         padding-top:50px;
+        @include tab{
+            padding: 0;
+        }
         .icontext{
             font-size: 1.75rem;
+
+            @include tab{
+                font-size: 1rem;
+            }
         }
         &:hover{
             color:white;

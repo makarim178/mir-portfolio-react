@@ -6,12 +6,24 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    
     .contactDivContainer{
         width: 100vw;
-        height: 100vh;
         display: flex;
-
         align-items: center;
+        padding-top: 90px;
+
+        @include tab{
+            flex-direction: column-reverse;
+            padding-top: 90px;
+        }
+
+        @include mobile{
+            padding-top: 90px;
+
+        }
+    
 
         div{
             display: flex !important;
@@ -23,6 +35,11 @@
             flex: 4;
             justify-content: center;
             align-items: center;
+
+            @include tab {
+                flex: none;
+                width:  100%;
+            }
 
             .contactDetailsDiv{
                 flex-direction: column !important;
@@ -37,10 +54,17 @@
             flex: 8;
             margin-left: 25px;
             justify-content: center;
+
+            @include tab{
+                flex: none;
+                width: 100%;
+                align-items: center;
+            }
+
             
 
             .contactTitle {
-                margin-bottom: 90px;
+                
                 display: flex !important;
                 justify-content: center;
                 

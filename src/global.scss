@@ -32,5 +32,20 @@ $aboutBgColor: #65686f;
 
 $title-fontSize: 2.5rem;
 
+$width: 500px;
+$tab-width: 900px;
+
+@mixin mobile{
+    @media (max-width: #{$width}){
+        @content
+    }
+}
+
+@mixin tab{
+    @media (max-width: #{$tab-width}) {
+        @content
+    }
+}
+
 
 

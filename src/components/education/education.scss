@@ -3,23 +3,54 @@
     background-color: $eduBgColorDarkBlue;
     display: flex;
     flex-direction: column;
+    padding-top: 90px;
+    height: 100vh;
+    overflow: hidden;
+
+    @include tab{
+        height: auto;
+    }
     
     
 
     .title{
-        margin-top:90px;
+        
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+
+        @include tab{
+            height: 40px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 50px;
+        }
+        @include mobile {
+            height: 30px;
+        }
+        
 
         h1{
             font-family: 'Anton', sans-serif;
-            font-size: $title-fontSize*1.5;
+            font-size: $title-fontSize;
             text-transform: uppercase;
             color: white;
             border-bottom: 8px solid whitesmoke;
             border-radius: 1px;
+            
+            @include tab {
+                font-size: 28px;
+                border-bottom: 5px solid whitesmoke;
+                border-bottom: none;
+                
+            }
+            @include mobile {
+                border-bottom: none;
+                font-size: 20px;
+            }
         }
 
     }
@@ -27,7 +58,7 @@
     .content{
         display: flex;
         flex-direction: column;
-        margin:50px;
+        padding: 0 50px;
         position: relative;
         
     }

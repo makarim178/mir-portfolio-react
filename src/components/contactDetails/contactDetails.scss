@@ -5,7 +5,11 @@
     cursor: pointer;
     flex-direction: column !important;
     padding-top: 50px;
-    transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
+
+    @include tab{
+        padding: 0;
+    }
     a{
         color: $txtColorDarkGray;
         text-decoration: none;
@@ -19,12 +23,19 @@
             .contactIcon{
                 font-size: 1.5rem;
                 margin-right: 15px;
+
+                @include tab{
+                    font-size: 1rem;
+                }
             }
         }
 
         .txt{
             span{
                 font-size: 1.25rem;
+                @include tab{
+                    font-size: 0.8rem;
+                }
             }
         }
 
