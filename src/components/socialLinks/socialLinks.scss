@@ -1,0 +1,20 @@
+@import "../../global.scss";
+
+.socialIcons{
+    display: flex !important;
+    flex-direction: row !important;
+    color:$txtColorDarkGray;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+
+    .icon{
+        margin-right:10px;
+        padding-top:50px;
+        .icontext{
+            font-size: 1.75rem;
+        }
+        &:hover{
+            color:white;
+        }
+    }
+}

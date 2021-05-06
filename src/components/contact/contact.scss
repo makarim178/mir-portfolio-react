@@ -1,0 +1,214 @@
+@import "../../global.scss";
+
+.contact {
+    background-color: $eduBgColorDarkBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .contactDivContainer{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+
+        align-items: center;
+
+        div{
+            display: flex !important;
+            flex-direction: column;
+        }
+
+
+        .contactLeft{
+            flex: 4;
+            justify-content: center;
+            align-items: center;
+
+            .contactDetailsDiv{
+                flex-direction: column !important;
+            }
+
+            .contactSocialDiv{
+                flex-direction: row !important;
+            }
+        }
+
+        .contactRight{
+            flex: 8;
+            margin-left: 25px;
+            justify-content: center;
+            
+
+            .contactTitle {
+                margin-bottom: 90px;
+                display: flex !important;
+                justify-content: center;
+                
+        
+                h1{
+                    font-family: 'Anton', sans-serif;
+                    font-size: $title-fontSize*1.25;
+                    text-transform: uppercase;
+                    color: white;
+                    // border-bottom: 8px solid whitesmoke;
+                    // border-radius: 1px;
+                }
+            }
+
+            .contactForm{
+                width: 80%;
+                .defaultMsg{
+                    color: crimson;
+                }
+
+                .successMsg{
+                    color: white;
+                }
+                form{
+                    label{
+                        color: white;
+                        padding: 10px 0;
+                        font-size: 0.85rem;
+                    }
+
+                    input[type="text"], input[type="password"], textarea, select
+                    { 
+                        outline: none;
+                        background-color: rgba($color: #050825, $alpha: 0.5);
+                        height: 2rem;
+                        border-radius: 3px;
+                        border: 0.1rem solid rgba($color: white, $alpha: 0.4);
+                        color: #dfdfdf;
+
+
+                        &:focus{
+                            border: 0.1rem solid rgba($color: rgb(48, 179, 255), $alpha: 0.25);
+                            color: #dfdfdf;
+                        }
+                        
+                    }
+                    
+                    
+                    textarea{
+                        height: 200px;
+                        border-bottom-right-radius: 20px;
+                    }
+
+                    .contactNameEmail{
+                        display: flex !important;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .contactName{
+                            flex: 0.5;
+                            padding-right: 10px;
+
+                        }
+
+                        .contactEmail{
+                            flex: 0.5;
+                        }
+
+                    }
+                    .contactBtns{
+                        padding-top: 20px;
+                        height: 80px;
+                        display: flex !important;
+                        flex-direction: row !important;
+                        transition: all 2s ease-in-out;
+                        
+                        button{
+                            height: 50px;
+                            cursor: pointer;
+                            color: rgb(211, 211, 211);
+                            font-size: 1.25rem;
+                            border: none;
+                            
+                        }
+                        
+                        .btnResetDiv{
+                            flex: 0.5;
+                            padding: 10px;
+                            .resetBtn{
+                                background-color: crimson;
+                                
+                                
+                                &:hover{
+                                    color: white;
+                                    background-color: rgb(173, 14, 46);
+                                    transform: skew(15deg);
+                                    
+                                }
+                            }
+                            
+                        }
+                        
+                        .btnSubmitDiv{
+                            
+                            flex: 0.5;
+                            padding: 10px;
+
+                            .subBtn{
+                                background-color: rgb(0, 137, 250);
+                                &:hover{
+                                    color: white;
+                                    background-color: rgb(0, 122, 221);
+                                    transform: skew(15deg);
+                                    
+                                }
+
+                            }
+                            
+                        }
+
+
+                        
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+    .contactFooter{
+        position: absolute;
+        bottom: 0;
+        
+
+        .contactCopyRightDiv{
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 1rem;
+            padding: 50px;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            .copyIcon{
+                padding-right: 10px;
+                &:hover{
+                    transform: skew(10deg);
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+            
+            .copyP{
+                
+                &:hover{
+                    transform: skew(10deg);
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+    
+    
+    
+    
+        }
+
+    }
+
+}

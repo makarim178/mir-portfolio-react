@@ -1,0 +1,167 @@
+@import "../../global.scss";
+.topbar {
+    width: 100vw;
+    
+    
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    
+    z-index: 2;
+    transition: all 0.25s ease-in-out;
+
+    .wrapper {
+        padding: 30px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left{ 
+            display: flex;
+            align-items: center;
+
+            .logo {
+                
+                
+                &:hover{
+                    span{
+                        &:first-child{
+                            animation: logo-static 0.15s ease-in-out forwards;
+                            animation-delay: .1s;
+                        }
+                        &:last-child{
+                            animation: logo 0.15s ease-in-out forwards;
+                        }
+                    }
+                }
+
+                span{
+                    font-family: 'Anton', sans-serif;
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                    
+                    
+                    top:5px;
+                    &:first-child{
+                        color: white;
+                        position: absolute;  
+                        left: 50px;
+                    }
+                    &:last-child{
+                        position:  absolute;  
+                        color: $txtColorPink;
+                        opacity: 0;
+                        left: 98px;
+                    }
+                }
+                @keyframes logo-static {
+                    from{
+                        opacity: 1;
+                    }
+                    to{
+                        opacity: 0;
+                        transform: skewX(40deg);
+                        transform: translateX(-48px);
+                    }
+                    
+                }
+                
+                @keyframes logo {
+                    from{
+                        transform: skewX(-40deg);
+                        opacity: 0;
+                    }
+                    to{
+                        transform: translateX(-48px);
+                        opacity: 1;
+                    }
+                }
+                //font-family: 'Pinyon Script', cursive;
+                // font-family: 'Ranga', cursive;
+                // font-family: 'Almendra Display', cursive;
+                font-size: 2rem;
+                color: white;
+                text-decoration: none;
+                margin-right: 40px;
+
+            }
+
+            .itemContainer{
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                color: inherit;
+
+
+                .icon{
+                    font-size: 1.2rem;
+                    margin-right: 10px;
+                }
+
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: $hoverColorGreen;
+                    }
+                }
+
+                span{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .right{
+            .hamburger{
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    transform-origin: left;
+                    transition: all 0.1s ease-in-out;
+                }
+
+            }
+        }
+    }
+
+    &.active {
+        
+        background-color: rgba($color: $mainBgColor, $alpha: 0.65);
+        backdrop-filter: blur(15px);
+
+        .wrapper{           
+
+            .right{
+                .hamburger{
+                    span{
+                        &:first-child{                            
+                            transform: rotate(45deg);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:last-child{
+                            
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

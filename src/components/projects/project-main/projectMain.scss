@@ -1,0 +1,198 @@
+@import "../../../global.scss";
+
+.projMain{
+    background-color: $projectBgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .projTitle {
+        text-align: center;
+        margin-top: 90px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-family: 'Anton', sans-serif;
+            font-size: $title-fontSize*1.25;
+            text-transform: uppercase;
+            color: $skillsTxtTitle;
+            // border-bottom: 8px solid whitesmoke;
+            // border-radius: 1px;
+        }
+    }
+    
+    .projContainer{
+        width: 100vw;
+        height: 80%;
+        // background-color: silver;
+        position: absolute;
+        
+        bottom: 0;
+        margin-bottom: 40px;
+
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow: hidden; 
+
+        .projItem{
+            width: 90%;
+            height: 100%;
+            background-color: rgba($color: white, $alpha: 0.85);
+            box-shadow: 2px 2px 5px 2px rgba($color: #000000, $alpha: 0.25), 0 0px 20px 0 rgba($color: #000000, $alpha: 0.1);
+            border-radius: 5px;
+            margin: 10px 10px;
+            display: flex;
+
+            .projLeft{
+                flex:4;
+                height: 100%;    
+                display: flex;
+                justify-content: center;
+                align-items: center;            
+                position: relative;
+                .lcFront{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding:2.5em;
+
+                    .projLcTitle{
+                        position: relative;
+
+                        h2{
+                            font-size: 4em;
+                            text-transform: uppercase;
+                            padding: 3px;
+                            margin-bottom: 50px;
+                            color: rgba($color: #000000, $alpha: 0.7);
+                        }
+
+                        .lcTitleBack{
+                            position: absolute;
+                            top: -20px;
+                            left: 30%;
+
+                            h1{
+                                color: rgba($color: #000000, $alpha: 0.1);
+                                font-size: 8rem;
+                            }
+                        }
+                    }
+
+                    h5{
+                        padding: 10px;
+                        font-size: 2rem;
+                        color: rgba($color: #000000, $alpha: 0.6);
+                        text-transform: capitalize;
+                        font-style: italic;
+
+                       
+                    }
+
+                    p{
+                        text-align: justify;
+                    }
+
+                    .visitBtn{
+                        width: 100%;
+                        margin: 25px;
+                        a{
+                            .lcProjGlobeBtn{
+                                color: rgba($color: #000000, $alpha: 0.7);
+                                transition: all 0.5s ease;
+                                
+                                &:hover{
+                                    color: rgba($color: #000000, $alpha: 0.5);
+                                    cursor: pointer;
+                                    transform: skew(-15deg) rotate(30deg) scale(1.1);
+                                    
+                                }
+    
+                            }
+                        }
+
+                    }
+
+                }
+
+                
+            }
+
+            .projRight{
+                flex:8;
+                height: 100%;
+                position: relative;
+
+                .projRImageBg{
+                    position: absolute;
+                    transform: rotate(-15deg) translateX(100px) translateY(-150px);
+                    opacity: 0.75;
+                }
+
+                .prToolsUsedDiv{
+                    position: absolute;
+                    bottom: 50px;
+                    right: 50px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .videoDiv{
+                    position: absolute;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin:5px;
+                    padding:5px;
+                    justify-content: center;
+                    transition: all 0.5s ease-in-out;
+                }
+                
+            }
+
+        }
+        
+    }
+
+    .projArrowRight{
+        color: white;
+        position: absolute;
+        right: 5px;
+        bottom: 50vh;
+        cursor: pointer;
+        .projArrowRightIcon{
+            font-size: 4em;
+            
+            &:hover{
+                text-shadow: 1px 1px 2px 2px rgba($color: #000000, $alpha: 1);
+
+            }
+        }
+    }
+    .projArrowLeft{
+        color: white;
+        position: absolute;
+        left: 15px;
+        bottom: 50vh;
+        text-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.5);
+        cursor: pointer;
+
+        .projArrowleftIcon{
+            font-size: 4em;
+                &:hover{
+                    text-shadow: 1px 1px 2px 2px rgba($color: #000000, $alpha: 1);
+            
+                }
+        }
+    }
+
+}

@@ -1,0 +1,40 @@
+@import "../../global.scss";
+
+.skills{
+    background-color: $skillsBgColor;
+    
+    .title{
+        margin-top:90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    h1{
+            font-family: 'Anton', sans-serif;
+            font-size: $title-fontSize*1.5;
+            text-transform: uppercase;
+            color: $skillsTxtTitle;
+            // border-bottom: 8px solid whitesmoke;
+            // border-radius: 1px;
+        }
+    }
+
+    .skillsDiv{
+        li{
+            padding: 25px;
+        }
+
+
+    }
+    
+    // .skillsDiv{
+    //     // div{
+    //     //     display: flex !important;
+    //     //     flex-wrap: wrap ;
+    //     //     overflow-x: hidden;
+    //     //     overflow-x: scroll;
+    //     // }
+
+    // }
+}
