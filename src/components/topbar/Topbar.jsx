@@ -3,7 +3,7 @@ import './topbar.scss';
 const Topbar = ({menuOpen, setMenuOpen, setMenuItem}) => {
 
     const setMenuOnClick = (item)  => {
-        setMenuOpen(!menuOpen);
+        //setMenuOpen(false);
         setMenuItem(item);
     }
     return (
