@@ -41,7 +41,7 @@ const Skills = () => {
     const getData = async () => {
         const url = api + 'skills';
 
-        const skills = [];
+        //const skills = [];
 
         const ref = await fetch(url);
         await ref.json().then((data) => {
@@ -71,7 +71,6 @@ const Skills = () => {
                         swipeable={true}
                         draggable={true}
                         showDots={false}
-                        responsive={responsive}
                         focusOnSelect={true}
                         infinite={true}
                         autoPlay={true}
@@ -96,7 +95,6 @@ const Skills = () => {
                         swipeable={true}
                         draggable={true}
                         showDots={false}
-                        responsive={responsive}
                         focusOnSelect={true}
                         infinite={true}
                         autoPlay={true}
@@ -118,7 +116,6 @@ const Skills = () => {
                         swipeable={true}
                         draggable={true}
                         showDots={false}
-                        responsive={responsive}
                         focusOnSelect={true}
                         infinite={true}
                         autoPlay={true}
@@ -141,7 +138,6 @@ const Skills = () => {
                         swipeable={true}
                         draggable={true}
                         showDots={false}
-                        responsive={responsive}
                         focusOnSelect={true}
                         infinite={true}
                         autoPlay={true}
@@ -164,7 +160,6 @@ const Skills = () => {
                         swipeable={true}
                         draggable={true}
                         showDots={false}
-                        responsive={responsive}
                         focusOnSelect={true}
                         infinite={true}
                         autoPlay={true}

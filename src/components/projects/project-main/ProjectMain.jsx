@@ -62,7 +62,7 @@ const ProjectMain = () => {
                                     </p>
 
                                     <div className="visitBtn">
-                                        <a href={d.siteUrl} target="_blank">
+                                        <a href={d.siteUrl} target="_blank" rel="noopener noreferrer">
                                             <PublicIcon  className="lcProjGlobeBtn" />
                                         </a>
                                     </div>

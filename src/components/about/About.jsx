@@ -26,7 +26,7 @@ const About = () => {
             <div className="content">
                 <div className="left">
                     <div className="image">
-                        { data !== null && <img src={data.aboutImgUrl} /> }
+                        { data !== null && <img src={data.aboutImgUrl} alt={data.initialName}/> }
                     </div>
                 </div>
                 <div className="right">

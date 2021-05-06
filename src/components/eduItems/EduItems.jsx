@@ -6,24 +6,26 @@ import './eduItems.scss';
 const EduItems = ({edu}) => {
     const {id, instituteName, instituteAddress, gradName, completionRate, status, yearStarted, yearEnded, url} = edu;
     const [courses, setCourses] = useState([])
+
     useEffect(() => {
-       getCourses();
-       
+        getCourses();
     }, [])
 
-    const getCourses = async() => {
+    const getCourses = async () => {
         let url = api + `courses/edu/${id}`;
         const data = await fetch(url);
-        setCourses(await data.json());
-
+        await data.json().then(data => {
+            setCourses(data);
+        });
     }
+
     return (
         <div className="eduItems">
 
             <div className="topContent">
                 <div className="left">
                     <h1>
-                        <a href={url} target="_blank">
+                        <a href={url} target="_blank" rel="noopener noreferrer">
 
                             {instituteName}
                         </a>

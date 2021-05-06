@@ -16,7 +16,7 @@ const WorkExperience = () => {
     }, [])
     
     const getData = async () => {
-        const workExp = [];
+        // const workExp = [];
         const url = api + "workexperiences";
 
         const response = await fetch(url);
