@@ -37,7 +37,7 @@ const Intro = ({title, subTitle, linktoResume, desc, slogan}) => {
                             <p>{slogan}</p>
                         </div>
                         
-                        <a href={linktoResume} >
+                        <a href={linktoResume} target="_blank" >
                             <div className="resumeDiv">
                                 <div className="btnResume">
                                         <span>Download Resume</span>
