@@ -11,6 +11,10 @@
     .icon{
         margin-right:10px;
         padding-top:50px;
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
         @include tab{
             padding: 0;
         }
