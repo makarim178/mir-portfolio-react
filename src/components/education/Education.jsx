@@ -32,7 +32,6 @@ const Education = () => {
                 { education !== null && 
                     education.map((edu) => (
                         <EduItems key={edu.id} edu={edu} />
-                        
                     ))
                 }
             </div>

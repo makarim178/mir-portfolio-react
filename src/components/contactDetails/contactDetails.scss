@@ -5,10 +5,14 @@
     cursor: pointer;
     flex-direction: column !important;
     padding-top: 50px;
-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 
     @include tab{
-        padding: 0;
+        padding: 10px 0;
+    }
+
+    @include mobile {
+        padding: 10px 0;
     }
     a{
         color: $txtColorDarkGray;
@@ -17,7 +21,6 @@ transition: all 1s ease-in-out;
         display: flex;
         align-items: center;
 
-
         .icon{
             padding-top: 7px;
             .contactIcon{
@@ -25,16 +28,24 @@ transition: all 1s ease-in-out;
                 margin-right: 15px;
 
                 @include tab{
-                    font-size: 1rem;
+                    font-size: 1.35rem;
+                }
+
+                @include mobile {
+                    font-size: 1.25rem;
                 }
             }
         }
 
         .txt{
             span{
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 @include tab{
-                    font-size: 0.8rem;
+                    font-size: 1.35rem;
+                }
+
+                @include mobile {
+                    font-size: 1.25rem;
                 }
             }
         }

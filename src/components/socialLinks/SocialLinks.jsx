@@ -21,7 +21,7 @@ const SocialLinks = () => {
 
 
     const getLinks = async () => {
-        const lnkRef = [];
+        //const lnkRef = [];
         const url = api + 'links';
 
         const ref = await fetch(url);
@@ -35,27 +35,27 @@ const SocialLinks = () => {
             {
                 links.length > 0 && links.map((link) => (
                     <div className="icon" key={link.id}>
-                        {link.linkName == "linkedIn" && <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.linkName === "linkedIn" && <a href={link.url} target="_blank" rel="noopener noreferrer">
                                 <LinkedInIcon className="icontext"/>
                             </a>
                         }
-                        {link.linkName == "github" && <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.linkName === "github" && <a href={link.url} target="_blank" rel="noopener noreferrer">
                                 <GitHubIcon className="icontext"/>  
                             </a>
                         }
-                        {link.linkName == "heroku" && <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.linkName === "heroku" && <a href={link.url} target="_blank" rel="noopener noreferrer">
                             <LanguageIcon className="icontext"/>
                             </a>
                         }
-                        {link.linkName == "facebook" && <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.linkName === "facebook" && <a href={link.url} target="_blank" rel="noopener noreferrer">
                             <FacebookIcon className="icontext"/>
                             </a>
                         }
-                        {link.linkName == "twitter" && <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.linkName === "twitter" && <a href={link.url} target="_blank" rel="noopener noreferrer">
                             <TwitterIcon className="icontext"/> 
                             </a>
                         }
-                        {link.linkName == "instagram" && <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        {link.linkName === "instagram" && <a href={link.url} target="_blank" rel="noopener noreferrer">
                             <InstagramIcon className="icontext"/>  
                             </a>
                         }

@@ -30,9 +30,6 @@ const Skills = () => {
     const [dataSkills, setDataSkills] = useState([]);
     const [designSkills, setDesignSkills] = useState([]);
     const [others, setOthers] = useState([]);
-
-
-    
     
     useEffect(() => {
         getData();
@@ -45,6 +42,8 @@ const Skills = () => {
 
         const ref = await fetch(url);
         await ref.json().then((data) => {
+
+            // console.log(data);
             setfeSkills(data.filter((e) => e.category === 'FrontEnd'))
             setBeSkills(data.filter((e) => e.category === 'BackEnd'))
             setDataSkills(data.filter((e) => e.category === 'Data'))

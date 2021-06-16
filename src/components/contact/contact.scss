@@ -76,6 +76,10 @@
                     color: white;
                     // border-bottom: 8px solid whitesmoke;
                     // border-radius: 1px;
+
+                    @include mobile{
+                        font-size: $title-fontSize*.75;
+                    }
                 }
             }
 
@@ -93,6 +97,10 @@
                         color: white;
                         padding: 10px 0;
                         font-size: 0.85rem;
+
+                        @include mobile{
+                            font-size: 0.6rem;
+                        }
                     }
 
                     input[type="text"], input[type="password"], textarea, select
@@ -103,6 +111,10 @@
                         border-radius: 3px;
                         border: 0.1rem solid rgba($color: white, $alpha: 0.4);
                         color: #dfdfdf;
+
+                        @include mobile{
+                            height: 1rem;
+                        }
 
 
                         &:focus{
@@ -116,6 +128,10 @@
                     textarea{
                         height: 200px;
                         border-bottom-right-radius: 20px;
+
+                        @include mobile{
+                            height: 100px;
+                        }
                     }
 
                     .contactNameEmail{
@@ -148,6 +164,11 @@
                             color: rgb(211, 211, 211);
                             font-size: 1.25rem;
                             border: none;
+                            
+                            @include mobile{
+                                height: 25px;
+                                font-size: 0.85rem;
+                            }
                             
                         }
                         

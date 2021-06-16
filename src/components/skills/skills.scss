@@ -2,6 +2,10 @@
 
 .skills{
     background-color: $skillsBgColor;
+
+    @include mobile {
+        height: 200vh;
+    }
     
     .title{
         margin-top:90px;

@@ -33,7 +33,7 @@ $aboutBgColor: #65686f;
 $title-fontSize: 2.5rem;
 
 $width: 500px;
-$tab-width: 900px;
+$tab-width: 1024px;
 
 @mixin mobile{
     @media (max-width: #{$width}){

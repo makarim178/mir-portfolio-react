@@ -8,7 +8,13 @@
     border-radius: 5px;
     transition: all 0.5s ease;
     cursor: pointer;
+    
 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     @include tab{
         margin: 2px;
         width: 50px;
@@ -16,14 +22,9 @@
     }
     @include mobile{
         margin: 2px;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
     .prToolsCardImgDiv{
         
         display: flex;

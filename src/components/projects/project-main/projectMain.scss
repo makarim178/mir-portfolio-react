@@ -7,8 +7,6 @@
     align-items: center;
     position: relative;
 
-    
-
     .projTitle {
         text-align: center;
         padding-top: 90px;
@@ -23,12 +21,16 @@
             color: $skillsTxtTitle;
             // border-bottom: 8px solid whitesmoke;
             // border-radius: 1px;
+            @include mobile{ 
+                font-size: $title-fontSize*.75;
+            }
         }
+
     }
     
     .projContainer{
         width: 100vw;
-        height: calc(100vh - 300px);
+        height: calc(100vh - 250px);
 
         
         // background-color: silver;
@@ -48,6 +50,7 @@
         transition: all 0.5s ease-in-out;
 
         @include mobile{
+            height: calc(100vh - 200px);
             flex-direction: column;
         }
 
@@ -73,13 +76,14 @@
                 position: relative;
 
                 @include tab{ 
-                    flex: 3;
+                    flex: 2;
                     padding: 20px;
                 }
 
                 @include mobile {
-                    flex: 3;
+                    flex: 4;
                 }
+                
                 .lcFront{
                     display: flex;
                     flex-direction: column;
@@ -104,14 +108,13 @@
 
                             color: rgba($color: #000000, $alpha: 0.7);
                             @include tab{
-                                font-size: 0.75em;
+                                font-size: 2rem;
                                 padding: 0;
                                 margin-bottom: 0;
-
                             }
 
                             @include mobile{
-                                font-size: 0.6em;
+                                font-size: 1em;
                             }
                         }
 
@@ -129,7 +132,7 @@
                                 font-size: 8rem;
 
                                 @include tab{
-                                    font-size: 2em;
+                                    font-size: 3rem;
                                 }
                             }
                         }
@@ -143,11 +146,11 @@
                         font-style: italic;
 
                         @include tab{
-                            font-size: 0.65rem;
+                            font-size: 1.5rem;
                         }
 
                         @include mobile{
-                            font-size: 0.5rem;
+                            font-size: 0.85rem;
                         }
 
                        
@@ -158,12 +161,12 @@
                         padding: 0 20px;
 
                         @include tab{
-                            font-size: 9px;
+                            font-size: 12px;
                             padding: 0 5px;
                         }
 
                         @include mobile{
-                            font-size: 8px;
+                            font-size: 7px;
                         }
                     }
 
@@ -183,6 +186,7 @@
                             .lcProjGlobeBtn{
                                 color: rgba($color: #000000, $alpha: 0.7);
                                 transition: all 0.5s ease;
+                                padding-right: 5px;
 
                                 @include tab{
                                     font-size: 12px;
@@ -246,6 +250,12 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
+                    align-items: center;
+                    
+                    @include mobile{
+                        margin-left: 50px;
+                        
+                    }
                 }
 
                 .videoDiv{
@@ -262,7 +272,8 @@
                         padding: 0;
                         width: 100%;
                     }
-                    @include mobile{}
+                    @include mobile{
+                    }
                 }
                 
             }

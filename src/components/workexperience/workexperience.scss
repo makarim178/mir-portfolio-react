@@ -1,7 +1,8 @@
 @import '../../global.scss';
 
 .we{
-    background-color: $weBgSteelBlue;    
+    background-color: $weBgSteelBlue;   
+    height: 200vh; 
 
     .title{
         text-align: center;
@@ -17,6 +18,10 @@
             color: white;
             // border-bottom: 8px solid whitesmoke;
             // border-radius: 1px;
+            
+            @include mobile{
+                font-size: $title-fontSize*0.75;
+            }
         }
     }
     
@@ -25,6 +30,7 @@
         margin: 50px 0 150px 0;
         
         overflow: scroll !important;
+
         div{
             display: block !important;
             overflow: visible !important;
@@ -44,11 +50,18 @@
                     line-height: 1;
                     text-transform: uppercase;
                     overflow: hidden !important;
+
+                    @include mobile{ 
+                        font-size: 0.75rem;
+                    }
                 }
                 h5{
                     color: rgb(145, 145, 145);
                     font-size: 0.75rem;
                     overflow: hidden !important;
+                    @include mobile{ 
+                        font-size: 0.65rem;
+                    }
                 }
     
                 .desc{
@@ -67,6 +80,10 @@
                             &::before{
                                 content: "- ";
                             }
+
+                            @include mobile{ 
+                                font-size: 0.5rem;
+                            }
                         }
                     }   
                 }
@@ -81,10 +98,15 @@
                     color: rgb(153, 153, 153);
                     font-size: 0.75rem;
 
+                    @include mobile{ 
+                        font-size: 0.5rem;
+                    }
+
                     .link{
                         a{
                             color: inherit !important;
                             text-decoration: none;
+
                         }
 
                         &:hover{

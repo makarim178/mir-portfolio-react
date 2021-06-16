@@ -10,9 +10,18 @@
     margin: 10px;
     overflow:hidden;
 
+    @include mobile{
+        height: 50px;
+    }
+
     @include tab{
         height: auto;
         width: 150px;
+    }
+
+    @include mobile{ 
+        height: 60px;
+        width: 60px;
     }
     
     &:hover{

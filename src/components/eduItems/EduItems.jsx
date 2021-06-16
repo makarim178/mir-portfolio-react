@@ -9,7 +9,8 @@ const EduItems = ({edu}) => {
 
     useEffect(() => {
         getCourses();
-    }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const getCourses = async () => {
         let url = api + `courses/edu/${id}`;

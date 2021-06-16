@@ -6,6 +6,9 @@ import VideoContainer from '../vdoContainer/VideoContainer';
 import PublicIcon from '@material-ui/icons/Public';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import AttachmentIcon from '@material-ui/icons/Attachment';
+
 
 const ProjectMain = () => {
 
@@ -17,7 +20,7 @@ const ProjectMain = () => {
 
     const handleClick = (ways) => {
         ways === "left" 
-            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : data.length-1)
             : setCurrentSlide(currentSlide < data.length -1 ? currentSlide+1 : 0)
     }
 
@@ -26,6 +29,7 @@ const ProjectMain = () => {
         const dataRef = await fetch(url);
         //console.log(await dataRef.json());
         await dataRef.json().then((data) => { 
+            //console.log(data);
             setData(data);
         });
     }
@@ -61,9 +65,24 @@ const ProjectMain = () => {
                                     </p>
 
                                     <div className="visitBtn">
+                                        {d.prototypeLink && 
+                                        <a href={d.prototypeLink} target="_blank" rel="noopener noreferrer">
+                                            <AttachmentIcon  className="lcProjGlobeBtn" />
+                                        </a>
+                                        }
+                                        {d.siteUrl && 
                                         <a href={d.siteUrl} target="_blank" rel="noopener noreferrer">
                                             <PublicIcon  className="lcProjGlobeBtn" />
                                         </a>
+                                        }
+                                        {d.projectUrl && 
+                                        <a href={d.projectUrl} target="_blank" rel="noopener noreferrer">
+                                            <GitHubIcon  className="lcProjGlobeBtn" />
+                                        </a>
+                                        }
+
+
+
                                     </div>
 
                                 </div>

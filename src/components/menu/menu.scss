@@ -27,10 +27,19 @@
         @include tab{
             flex: 0.5;
         }
+
+        @include mobile{
+            flex: 0.25;
+        }
     }
     
     .right{
         flex: 0.35;
+
+        @include mobile {
+            flex: 0.75;
+            
+        }
 
         
 

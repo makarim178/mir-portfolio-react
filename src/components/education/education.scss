@@ -10,6 +10,10 @@
     @include tab{
         height: auto;
     }
+    @include mobile{
+        height: 200vh !important;
+
+    }
     
     
 
@@ -23,7 +27,7 @@
         overflow: hidden;
 
         @include tab{
-            height: 40px;
+            height: 50px;
             justify-content: flex-start;
             align-items: flex-start;
             padding-left: 50px;
@@ -49,7 +53,7 @@
             }
             @include mobile {
                 border-bottom: none;
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
