@@ -258,6 +258,44 @@
                     }
                 }
 
+                .projectImageDiv{
+                    position: absolute;
+                    display: flex;
+                    margin:50px;
+                    padding:10px;
+                    justify-content: center;
+                    transition: all 0.5s ease-in-out;
+                    align-items: center;
+                    width: 300px;
+                    height: 300px;
+                    background-color: whitesmoke;
+                    border-radius: 5px;
+
+                    @include tab{ 
+                        width: 200px;
+                        height: 200px;
+                    }
+                    @include mobile{ 
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    .projimgdiv{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img{
+                            width: 80%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:hover{
+                        box-shadow: 0 0.25em 0.5em 0 rgba($color: #000000, $alpha: 0.25), 0 0.4em 1.25em 0 rgba($color: #000000, $alpha: 0.15);
+                    }
+                }
+
                 .videoDiv{
                     position: absolute;
                     display: flex;
@@ -265,6 +303,8 @@
                     margin:5px;
                     padding:5px;
                     justify-content: center;
+                    align-items: center;
+
                     transition: all 0.5s ease-in-out;
 
                     @include tab{

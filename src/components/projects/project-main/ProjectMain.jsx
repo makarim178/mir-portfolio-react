@@ -29,7 +29,7 @@ const ProjectMain = () => {
         const dataRef = await fetch(url);
         //console.log(await dataRef.json());
         await dataRef.json().then((data) => { 
-            //console.log(data);
+            console.log(data);
             setData(data);
         });
     }
@@ -100,6 +100,19 @@ const ProjectMain = () => {
                                         <VideoContainer video={video.videoUrl} key={video.id}/>
                                         ))}
                                 </div>
+                            }
+
+                            {
+                                d.presentationThumbnail !== '' && 
+
+                            <a href={d.pdfPresentationLink} target="_blank" rel="noopener noreferrer">
+                                <div className="projectImageDiv">
+                                    <div className="projimgdiv">
+                            
+                                        <img src={d.presentationThumbnail} alt={d.title} />
+                                    </div>
+                                </div>
+                            </a>
                             }
 
 
